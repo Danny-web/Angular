@@ -1,9 +1,30 @@
-(function () {
-    function saludar(nombre) {
-        console.table('Hola ' + nombre); // Hola Logan
-    }
-    var wolverine = {
-        nombre: 'Logan'
+"use strict";
+(() => {
+    /* console.log('Inicio')
+
+    const prom1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject('se termino el timeout')
+        }, 1000);
+    })
+        .then(mensaje => console.log(mensaje))
+        .catch(err => console.warn(err))
+    
+
+    console.log('fin') */
+    const retirarDinero = (monto) => {
+        let dineroActual = 1000;
+        return new Promise((resolve, reject) => {
+            if (monto > dineroActual) {
+                reject('No hay suficientes fondos');
+            }
+            else {
+                dineroActual -= monto;
+                resolve(dineroActual);
+            }
+        });
     };
-    saludar(wolverine.nombre);
+    retirarDinero(5000)
+        .then(montoActual => console.log(`Me quedan ${montoActual}`))
+        .catch(err => console.warn(err));
 })();
