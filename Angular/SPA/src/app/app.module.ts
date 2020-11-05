@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { InfoComponent } from './components/info/info.component';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -26,7 +27,8 @@ import { HeroesService } from './services/heroes.service';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
